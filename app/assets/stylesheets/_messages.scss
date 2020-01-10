@@ -1,0 +1,227 @@
+* {
+  box-sizing: border-box;
+}
+
+.side_bar{
+  background-color: red;
+  height:100vh;
+  width:300px;
+  float:left;
+  .head{
+    background-color: #253141;
+    height:100px;
+    width:300px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+   .inner1{
+     background-color:#253141;
+     height:20px;
+     width:calc(100% - 40px);
+   }
+    .user{
+      background-color:#253141;
+      color:white;
+      float:left;
+      height:100%;
+      width:calc(100% - 60px);
+    }
+    .icon{
+      background-color:#253141;
+      float:right;
+      height:100%;
+      width:60px;
+    }
+     .editicon{
+       text-decoration: none;
+       color:#ffffff;
+       float:right;
+     }
+   
+     .cogicon{
+      text-decoration: none;
+      color:#ffffff;
+      float:right;
+      padding-right:5px;
+    }
+   
+  .main{
+    background-color:#2f3e51;
+    height:calc(100% - 100px);
+    width:100%;
+  }
+   .groups{
+     background-color: #2f3e51;
+     height:91px;
+     width:100%;
+     
+ 
+   }
+   .inners{
+    background-color: #2f3e51;
+    position: relative;
+    top:20px;
+  }
+  
+    
+    
+     .inner2{
+      background-color:#2f3e51;
+      color:white;
+      font-size:15px;
+      height:15px;
+      width:calc(100% - 40px);
+      margin:0 auto;
+      position:relative;
+     
+     }
+    
+     .inner3{
+      background-color: #2f3e51;
+      color:white;
+      font-size:11px;
+      height:11px;
+      width:calc(100% - 40px);
+      margin:0 auto;
+      margin-top:5px;
+
+     }
+}
+.main_chat{
+  background-color: white;
+  height:100vh;
+  width:calc(100vw - 300px);
+  float:right;
+}
+  .head{
+    background-color: #ffffff;
+    width:100%;
+    height:100px;
+  }
+    .headcontents{
+      background-color:#ffffff;
+      height:100px;
+      width:calc(100% - 80px);
+      margin:0 auto;
+    }
+     .leftcontent{
+       background-color:#2f3e51;
+       float:left;
+       position:relative;
+       top:35px;
+     }
+      .text1{
+        font-size:20px;
+        color:#333333;
+        background-color:#ffffff;
+        padding-bottom:15px;
+      }
+      .text2{
+        font-size:12px;
+        color:#999999;
+        background-color:#ffffff;
+      }
+    .rightcontent{
+      background-color:#ffffff;
+      float:right;
+      padding-top:28px;
+    }
+     .text3{
+       text-decoration: none;
+       background-color:#ffffff;
+       position:relative;
+       height:40px;
+       width:72px;
+       display:flex;
+       justify-content: center;
+       align-items: center;
+       font-size:16px;
+       color:#38aef0;
+       border:1px solid #38aef0;
+     }
+.main{
+   background-color:#fafafa;
+   height:calc(100% - 190px);
+   width:100%;
+ }
+  .messagesblock{
+    background-color:#fafafa;
+    height:100%;
+    width:100%;
+  }
+   .namedatam{
+     background-color: #fafafa;
+     height:48px;
+     width:100%;
+     position: relative;
+     top:35px;
+     bottom:46px;
+     left:40px;
+   }
+    .name{
+      color:#333333;
+      font-size:16px;
+      float:left;
+      padding-right:5px;
+    }
+    .data{
+      color:#999999;
+      font-size:12px;
+    }
+    .message{
+      background-color:#fafafa;
+      color:#434A54;
+      font-size:14px;
+      height:14px;
+      width:100%;
+      float:left;
+    }
+ .bottom{
+   background-color:#d2d2d2;
+   height:90px;
+   width:100%;
+   display:flex;
+   align-items: center;
+   justify-content: center;
+ }
+  .forms{
+    background-color: white;
+    height:50px;
+    width:calc(100% - 197px);
+    float:left;
+    display:flex;
+    align-items: center;
+  }
+   .typeform{
+     background-color: white;
+     height:45px;
+     width:calc(100% - 40px);
+     border:none;
+   }
+    ::placeholder{
+      padding-left:10px;
+    }
+   .imagebutton{
+     background-color:white;
+     margin-left:15px;
+     width:10px;
+    .image{
+      display: none;
+    }
+   }
+
+  .sendbutton{
+    background-color:#38aef0;
+    height:50px;
+    width:72px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:15px;
+  }
+   .sendbtn{
+     text-decoration: none;
+     color:white;
+     
+   }

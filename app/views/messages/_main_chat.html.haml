@@ -1,0 +1,39 @@
+.main_chat
+
+ .head
+  .headcontents
+   .leftcontent
+    .text1
+     test
+    .text2
+     Member:masa
+   .rightcontent
+    .text3
+     =link_to 'Edit', "#", class: "text3"
+
+
+ .main
+
+  .messagesblock
+
+   .namedatam
+    .name
+     masa
+    .data
+     2019/11/20(Wed) 17:43:01
+    .message
+     おはよう！
+
+  
+ .bottom
+  .forms
+   %input.typeform{:name => "text", :placeholder => "type a message"}
+    .imagebutton
+     %label.form-image{for: "image"}
+      %input.image{type: "file", id: "image"}
+      %i.far.fa-image
+
+  .sendbutton
+   =link_to 'Send', "#", class: "sendbtn"
+
+
