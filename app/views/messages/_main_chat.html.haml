@@ -4,12 +4,14 @@
   .headcontents
    .leftcontent
     .text1
-     test
+     = @group.name
     .text2
-     Member:masa
+     Members:
+     - @group.users.each do |user|
+      = user.name
    .rightcontent
     .text3
-     =link_to 'Edit', edit_group_path(current_user), class: "text3"
+     =link_to 'Edit', edit_group_path(@group), class: "text3"
 
 
  .main
@@ -17,23 +19,17 @@
   .messagesblock
 
    .namedatam
-    .name
-     masa
-    .data
-     2019/11/20(Wed) 17:43:01
-    .message
-     おはよう！
-
+   = render @messages
+    
   
  .bottom
   .forms
-   %input.typeform{name: "text", placeholder: "type a message"}
+   =form_for [@group, @message] do |f|
+    =f.text_field :content, class: 'typeform', placeholder: 'type a message'
     .imagebutton
-     %label.form-image{for: "image"}
-      %input.image{type: "file", id: "image"}
-      %i.far.fa-image
-
-  .sendbutton
-   =link_to 'Send', "#", class: "sendbtn"
-
+     =f.label :image, class: 'imagebutton' do
+      = icon('fas', 'image', class: 'icon2')
+      = f.file_field :image, class: 'hidden'
+      
+    =f.submit 'Send', class: 'sendbtn'
 
