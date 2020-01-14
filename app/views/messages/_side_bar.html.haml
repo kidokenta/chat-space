@@ -15,15 +15,12 @@
  .main
   - current_user.groups.each do |group|
    .groups
-    = link_to '#' do
+    = link_to group_messages_path(group) do
      .inners
       .inner2
        = group.name
       .inner3
-       メッセージはまだありません。
-  
-
-
+       = group.show_last_message
 
 
 

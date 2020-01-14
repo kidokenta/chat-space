@@ -156,13 +156,7 @@
     width:100%;
   }
    .namedatam{
-     background-color: #fafafa;
-     height:48px;
-     width:100%;
-     position: relative;
-     top:35px;
-     bottom:46px;
-     left:40px;
+     
    }
     .name{
       color:#333333;
@@ -182,51 +176,66 @@
       width:100%;
       float:left;
     }
+
+
  .bottom{
    background-color:#d2d2d2;
    height:90px;
    width:100%;
    display:flex;
-   align-items: center;
    justify-content: center;
+   align-items: center;
  }
-  .forms{
-    background-color: white;
-    height:50px;
-    width:calc(100% - 197px);
-    float:left;
-    display:flex;
-    align-items: center;
-  }
-   .typeform{
-     background-color: white;
-     height:45px;
-     width:calc(100% - 40px);
-     border:none;
-   }
-    ::placeholder{
-      padding-left:10px;
-    }
-   .imagebutton{
-     background-color:white;
-     margin-left:15px;
-     width:10px;
-    .image{
-      display: none;
-    }
+   .forms{
+    width:calc(100% - 150px);
+    background-color: #d2d2d2;
+    height:100%
    }
 
-  .sendbutton{
-    background-color:#38aef0;
-    height:50px;
-    width:72px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    margin-left:15px;
-  }
-   .sendbtn{
-     text-decoration: none;
-     color:white;
+    .typeform{
+      background-color: white;
+      height:50px;
+      width:calc(100% - 40px);
+      float:left;
+      position: relative;
+      top:20px;
      
+    }
+    .icon2{
+      color:black;
+      position:absolute;
+      right:150px;
+      bottom:35px;
+    }
+    .hidden{
+      visibility: hidden;
+    }
+
+
+
+   
+
+   .sendbtn{
+     background-color: #38aef0;
+     float:right;
+     height:40px;
+     width:50px;
+     position: relative;
+     bottom:45px;
+     right:-20px;
+
+
    }
+
+
+
+
+
+
+
+
+
+
+ 
+
+  
