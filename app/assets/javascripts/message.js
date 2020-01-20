@@ -98,9 +98,7 @@ var reloadMessages = function() {
         insertHTML += buildHTML(message)
       });
       //メッセージが入ったHTMLに、入れ物ごと追加
-      $('.main').append(insertHTML);
-      $('.main').animate({ scrollTop: $('.main')[0].scrollHeight});
-      $("#new_message")[0].reset();
+     
     }
   })
   .fail(function() {
