@@ -3,7 +3,7 @@ $(function(){
     if ( message.image ) {
       var html =
 
-     `<div class = "messagesall">
+     `
      <div class = "messages" id = ${messagee.id}>
      <div class = "namedata">
         <div class = "name">
@@ -22,13 +22,13 @@ $(function(){
           </p>
           </div>
           </div>
-          </div>`
+         `
 
       return html;
     } else {
       var html =
       
-     ` <div class = "messagesall">
+     ` 
      <div class = "messages" id = ${messagee.id}>
      <div class = "namedata">
         <div class = "name">
@@ -46,7 +46,7 @@ $(function(){
 
           </div>
           </div>
-          </div>`
+      `
 
       return html;
     };
