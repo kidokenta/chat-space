@@ -101,11 +101,10 @@ var reloadMessages = function() {
       $('.main').append(insertHTML);
       $('.main').animate({ scrollTop: $('.main')[0].scrollHeight});
       $("#new_message")[0].reset();
-      $(".form__submit").prop("disabled", false);
     }
   })
   .fail(function() {
-    console.log('error');
+    alert('error');
   });
 };
 if (document.location.href.match(/\/groups\/\d+\/messages/)) {
