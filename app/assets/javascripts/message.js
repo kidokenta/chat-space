@@ -11,7 +11,7 @@ $(function(){
      <div class = "messagewrapper" id = ${message.id}>
      <div class = "namedata">
         <div class = "name">
-         ${message.user.name}
+         ${message.user_name}
          </div>
         <div class = "data">
          ${message.created_at}
@@ -22,7 +22,6 @@ $(function(){
           <p class =  "messagecontent">
           ${message.content}
           <img src=${message.image} >
-    = image_tag message.image.url, class: 'messageimage' if message.image.present?
           </p>
           </div>
           </div>
