@@ -8,7 +8,7 @@ $(function(){
       var html =
 
      `  
-     <div class = "messagewrapper" id = ${message.id}>
+     <div class = "messagewrapper" message-id = ${message.id}>
      <div class = "namedata">
         <div class = "name">
          ${message.user_name}
@@ -32,7 +32,7 @@ $(function(){
       var html =
       
      ` 
-     <div class = "messagewrapper" id = ${message.id}>
+     <div class = "messagewrapper" message-id = ${message.id}>
      <div class = "namedata">
         <div class = "name">
          ${message.user_name}
@@ -71,8 +71,13 @@ $(function(){
       $('.main').append(html);      
       $('form')[0].reset();
       $('.main').animate({ scrollTop: $('.main')[0].scrollHeight});
+    })
+    .fail(function(){
+      alert('メッセージを入力してください');
+    })
+    .always(function(){
       $(".sendbtn").prop('disabled', false);
-  })
+    })
 })
 
 var reloadMessages = function() {
