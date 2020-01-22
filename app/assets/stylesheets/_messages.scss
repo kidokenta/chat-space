@@ -223,18 +223,129 @@
    .sendbtn{
      background-color: #38aef0;
      float:right;
-     height:40px;
-     width:50px;
+     height:50px;
+     width:70px;
      position: relative;
-     bottom:45px;
-     right:-20px;
+     bottom:50px;
+     right:-40px;
+     color:white;
 
 
    }
 
 
+  //  .account-page{
+  //    display:flex;
+  //    justify-content: center;
+  //    align-items: center;
+  .account-page__inner.clearfix{
+       width:960px;
+       height:600px;
+       background-color:white;
+       margin:60px auto;
+       padding:60px;
+       border:1px solid #ddd;
+       border-radius:5px;
+     }
+     .account-page__inner--left, .account-page__inner--right{
+      float: left;
+      width: 50%;
+      &:after{
+        clear:both;
+        content:"";
+        display:block;
+      }
+     }
+    
+     .account-page__header h2{
+       background-color:white;
+       color:black;
+       font-size:40px;
+       font-weight:200;
+       margin-bottom:10px;
+       letter-spacing: 3px;
+     }
 
+     .account-page__hader h2:after{
+       content:'';
+       display:block;
+       width:60px;
+       margin-top:5px;
+       border-bottom:1px solid ;
+     }
+     h5 {
+      margin-bottom: 20px;
+      font-size: 14px;
+      font-weight: 200;
+    }
 
+    .account-page--header{
+      .btn {
+        margin-top: 20px;
+        color: #fff;
+        background-color: blue;
+        font-size: 14px;
+
+      }
+  
+    }
+    .field {
+      margin-bottom: 10px;
+  
+      .field-label {
+        padding: 10px 0;
+        letter-spacing: 1px;
+        font-size: 14px;
+        font-weight: 200;
+  
+        i {
+          font-size: 11px;
+        }
+      }
+  
+      .field-input {
+        input {
+          width: 100%;
+          padding: 10px;
+          letter-spacing: 1px;
+        }
+      }
+    }
+    .btn {
+      display: inline-block;
+      height: 50px;
+      padding: 0 30px;
+      line-height: 50px;
+      letter-spacing: 1px;
+      text-align: center;
+      border: none;
+      border-radius: 2px;
+      background-color:gray;
+      text-decoration: none;
+      color:black;
+    }
+
+  //  #account-page.account-page
+  // .account-page__inner.clearfix
+  //   .account-page__inner--left.account-page__header
+  //     %h2 Log in
+  //     %h5 登録しているユーザーでログイン
+  //     = render "devise/shared/links"
+  //   .account-page__inner--right.user-form
+  //     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+  //       .field
+  //         .field-label
+  //           = f.label :email
+  //         .field-input
+  //           = f.email_field :email, autofocus: true
+  //         .field
+  //           .field-label
+  //             = f.label :password
+  //             %i (英数字8文字以上)
+  //           .field-input
+  //             = f.password_field :password, autocomplete: "off"
+  //         .actions
+  //           = f.submit "Log in", class: 'btn'
 
 
 
