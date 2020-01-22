@@ -1,13 +1,10 @@
 $(function(){
 
-  
-  
 
-  function buildHTML(message){
-    if ( message.image ) {
-      var html =
+  var buildHTML = function(message){
+    if ( message.image && message.content ) {
 
-     `  
+      var html = `  
      <div class = "messagewrapper" data-message-id = ${message.id}>
      <div class = "namedata">
         <div class = "name">
@@ -26,11 +23,8 @@ $(function(){
           </div>
           </div>
          `
-
-      return html;
-    } else {
-      var html =
-      
+    } else if(message.content){
+      var html = 
      ` 
      <div class = "messagewrapper" data-message-id = ${message.id}>
      <div class = "namedata">
@@ -50,10 +44,28 @@ $(function(){
           </div>
           </div>
       `
-
-      return html;
-    };
-  }
+    }else if (message.image){
+      var html = 
+    
+      `  
+      <div class = "messagewrapper" data-message-id = ${message.id}>
+      <div class = "namedata">
+         <div class = "name">
+          ${message.user_name}
+          </div>
+         <div class = "data">
+          ${message.created_at}
+          </div>
+          </div>
+         <div class = "messagecontents">
+           <img src=${message.image} >
+           </div>
+           </div>
+          `
+        };
+        return html;
+      };
+      
   $('#new_message').on('submit',function(e){
     e.preventDefault()
     var formData = new FormData(this);
@@ -102,13 +114,19 @@ var reloadMessages = function() {
         insertHTML += buildHTML(message)
       });
       //メッセージが入ったHTMLに、入れ物ごと追加
-    }
-  })
+      $('.main').append(insertHTML);
+      $('.main').animate({ scrollTop: $('.main')[0].scrollHeight});
+      $("#new_message")[0].reset();
+      $(".form__submit").prop("disabled", false);
+      }
+    })
   .fail(function() {
     alert('error');
   });
-};
-if (document.location.href.match(/\/groups\/\d+\/messages/)) {
-  setInterval(reloadMessages, 7000);
 }
+  
+
+ if (document.location.href.match(/\/groups\/\d+\/messages/)) {
+  setInterval(reloadMessages, 7000);
+};
 });
