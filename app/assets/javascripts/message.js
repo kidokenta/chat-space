@@ -8,7 +8,7 @@ $(function(){
       var html =
 
      `  
-     <div class = "messagewrapper" message-id = ${message.id}>
+     <div class = "messagewrapper" data-message-id = ${message.id}>
      <div class = "namedata">
         <div class = "name">
          ${message.user_name}
@@ -32,7 +32,7 @@ $(function(){
       var html =
       
      ` 
-     <div class = "messagewrapper" message-id = ${message.id}>
+     <div class = "messagewrapper" data-message-id = ${message.id}>
      <div class = "namedata">
         <div class = "name">
          ${message.user_name}
