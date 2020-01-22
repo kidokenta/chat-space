@@ -7,7 +7,7 @@ $(function(){
     if ( message.image ) {
       var html =
 
-     `
+     `  
      <div class = "messagewrapper" id = ${message.id}>
      <div class = "namedata">
         <div class = "name">
@@ -97,7 +97,6 @@ var reloadMessages = function() {
         insertHTML += buildHTML(message)
       });
       //メッセージが入ったHTMLに、入れ物ごと追加
-     
     }
   })
   .fail(function() {

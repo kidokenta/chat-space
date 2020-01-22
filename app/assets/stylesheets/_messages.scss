@@ -234,61 +234,57 @@
    }
 
 
-  //  .account-page{
-  //    display:flex;
-  //    justify-content: center;
-  //    align-items: center;
-  .account-page__inner.clearfix{
-       width:960px;
-       height:600px;
-       background-color:white;
-       margin:60px auto;
-       padding:60px;
-       border:1px solid #ddd;
-       border-radius:5px;
-     }
-     .account-page__inner--left, .account-page__inner--right{
-      float: left;
-      width: 50%;
-      &:after{
-        clear:both;
-        content:"";
-        display:block;
+
+   .account-page {
+    .account-page__inner {
+      width: 980px;
+      margin: 60px auto;
+      padding: 60px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+  
+      .account-page__inner--left, .account-page__inner--right {
+        float: left;
+        width: 50%;
       }
-     }
-    
-     .account-page__header h2{
-       background-color:white;
-       color:black;
-       font-size:40px;
-       font-weight:200;
-       margin-bottom:10px;
-       letter-spacing: 3px;
-     }
-
-     .account-page__hader h2:after{
-       content:'';
-       display:block;
-       width:60px;
-       margin-top:5px;
-       border-bottom:1px solid ;
-     }
-     h5 {
-      margin-bottom: 20px;
-      font-size: 14px;
-      font-weight: 200;
+      &:after {
+        clear: both;
+        content: "";
+        display: block;
+      }
     }
-
-    .account-page--header{
+  
+    .account-page__header {
+      h2 {
+        margin-bottom: 10px;
+        letter-spacing: 3px;
+        font-size: 40px;
+        font-weight: 200;
+  
+        &:after {
+          content: '';
+          display: block;
+          width: 60px;
+          margin-top: 5px;
+          border-bottom: 1px solid #38aef0;
+        }
+      }
+  
+      h5 {
+        margin-bottom: 20px;
+        font-size: 14px;
+        font-weight: 200;
+      }
+  
       .btn {
         margin-top: 20px;
         color: #fff;
-        background-color: blue;
+        background-color: #ccc;
         font-size: 14px;
-
       }
-  
     }
+  
     .field {
       margin-bottom: 10px;
   
@@ -311,6 +307,7 @@
         }
       }
     }
+  
     .btn {
       display: inline-block;
       height: 50px;
@@ -320,10 +317,157 @@
       text-align: center;
       border: none;
       border-radius: 2px;
-      background-color:gray;
-      text-decoration: none;
-      color:black;
     }
+  
+    input[type='submit'] {
+      float: left;
+      margin-top: 20px;
+      color: #fff;
+      background-color: #38aef0;
+    }
+  
+    .field-label {
+      .field_with_errors {
+        display: inline-block;
+        color: black;
+        font-weight: 400;
+      }
+    }
+  
+    .field-input {
+      .field_with_errors {
+        position: relative;
+  
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          width: 5px;
+          background-color: #d65f4c;
+        }
+      }
+    }
+  }
+  
+  #error_explanation {
+    margin: 20px 0;
+    padding: 20px 30px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+  
+    h2 {
+      margin-bottom: 10px;
+      color: black;
+      font-size: 14px;
+    }
+  
+    ul {
+      margin: 0;
+      padding-left: 17px;
+      list-style: square;
+    }
+  
+    li {
+      margin: 0;
+      padding: 0;
+      font-size: 13px;
+    }
+  }
+
+
+  //  .account-page{
+  //    display:flex;
+  //    justify-content: center;
+  //    align-items: center;
+  // .account-page__inner.clearfix{
+  //      width:960px;
+  //      height:600px;
+  //      background-color:white;
+  //      margin:60px auto;
+  //      padding:60px;
+  //      border:1px solid #ddd;
+  //      border-radius:5px;
+  //    }
+  //    .account-page__inner--left, .account-page__inner--right{
+  //     float: left;
+  //     width: 50%;
+  //     &:after{
+  //       clear:both;
+  //       content:"";
+  //       display:block;
+  //     }
+  //    }
+    
+  //    .account-page__header h2{
+  //      background-color:white;
+  //      color:black;
+  //      font-size:40px;
+  //      font-weight:200;
+  //      margin-bottom:10px;
+  //      letter-spacing: 3px;
+  //    }
+
+  //    .account-page__hader h2:after{
+  //      content:'';
+  //      display:block;
+  //      width:60px;
+  //      margin-top:5px;
+  //      border-bottom:1px solid ;
+  //    }
+  //    h5 {
+  //     margin-bottom: 20px;
+  //     font-size: 14px;
+  //     font-weight: 200;
+  //   }
+
+  //   .account-page--header{
+  //     .btn {
+  //       margin-top: 20px;
+  //       color: #fff;
+  //       background-color: blue;
+  //       font-size: 14px;
+
+  //     }
+  
+  //   }
+  //   .field {
+  //     margin-bottom: 10px;
+  
+  //     .field-label {
+  //       padding: 10px 0;
+  //       letter-spacing: 1px;
+  //       font-size: 14px;
+  //       font-weight: 200;
+  
+  //       i {
+  //         font-size: 11px;
+  //       }
+  //     }
+  
+  //     .field-input {
+  //       input {
+  //         width: 100%;
+  //         padding: 10px;
+  //         letter-spacing: 1px;
+  //       }
+  //     }
+  //   }
+  //   .btn {
+  //     display: inline-block;
+  //     height: 50px;
+  //     padding: 0 30px;
+  //     line-height: 50px;
+  //     letter-spacing: 1px;
+  //     text-align: center;
+  //     border: none;
+  //     border-radius: 2px;
+  //     background-color:gray;
+  //     text-decoration: none;
+  //     color:black;
+  //   }
 
   //  #account-page.account-page
   // .account-page__inner.clearfix
